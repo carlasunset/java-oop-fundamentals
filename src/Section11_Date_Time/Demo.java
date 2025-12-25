@@ -32,9 +32,15 @@ public class Demo {
         System.out.println("LocalDateTime customized date: " + date5);
         System.out.println("Instant customized date: " + date6);
         System.out.println("Instant customized date: " + date7); //the output will be 3 hours delayed
-        System.out.println("LocalDate customized date providing an specific format 22/04/2025: " + date8);
-        System.out.println("LocalDateTime customized datetime providing an specific format 22/04/2025 19:30: " + date9);
+        System.out.println("LocalDate customized date providing a specific format 22/04/2025: " + date8);
+        System.out.println("LocalDateTime customized datetime providing a specific format 22/04/2025 19:30: " + date9);
 
+        //Other useful functions with date and time
+        System.out.println("date1 day of the month: " + date1.getDayOfMonth());
+        System.out.println("date1 month: " + date1.getMonth());
+        System.out.println("date1 year: " + date1.getYear());
+        System.out.println("date2 hour: " + date2.getHour());
+        System.out.println("date2 minutes: " +date2.getMinute());
 
     }
 }
