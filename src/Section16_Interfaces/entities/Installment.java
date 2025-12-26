@@ -1,21 +1,27 @@
 package Section16_Interfaces.entities;
 
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Installment {
+    private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-    private Date dueDate;
+    private LocalDate dueDate;
     private Double amount;
 
     public Installment(){
-
     }
 
-    public Date getDueDate() {
+    public Installment(LocalDate dueDate, Double amount) {
+        this.dueDate = dueDate;
+        this.amount = amount;
+    }
+
+    public LocalDate getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(Date dueDate) {
+    public void setDueDate(LocalDate dueDate) {
         this.dueDate = dueDate;
     }
 
@@ -25,5 +31,10 @@ public class Installment {
 
     public void setAmount(Double amount) {
         this.amount = amount;
+    }
+
+    @Override
+    public String toString() {
+        return dueDate.format(formatter) + " - " + String.format("%.2f", amount);
     }
 }

@@ -1,8 +1,13 @@
 package Section16_Interfaces.application;
 
+import Section16_Interfaces.entities.Contract;
+import Section16_Interfaces.entities.Installment;
+import Section16_Interfaces.services.ContractService;
+import Section16_Interfaces.services.PaypalService;
+
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -10,17 +15,28 @@ public class Program {
     public static void main(String[] args) throws ParseException {
         Locale.setDefault(Locale.US);
         Scanner scanner = new Scanner(System.in);
-        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-        System.out.println("Entre os dados do contrato:");
-        System.out.print("Numero: ");
-        int numero = scanner.nextInt();
-        System.out.print("Data dd/MM/yyyy: ");
-        Date data = formatter.parse(scanner.next());
-        System.out.print("Valor do contrato: ");
-        double valorContrato = scanner.nextDouble();
-        System.out.print("Entre com o numero de parcelas: ");
-        int parcelas = scanner.nextInt();
+        System.out.println("Enter the contract data:");
+        System.out.print("Number: ");
+        int number = scanner.nextInt();
+        System.out.print("Date dd/MM/yyyy: ");
+        LocalDate date = LocalDate.parse(scanner.next(), formatter);
+        System.out.print("Contract value: ");
+        double contractValue = scanner.nextDouble();
+
+        Contract contract = new Contract(number, date, contractValue);
+
+        System.out.print("Enter with the installments number: ");
+        int installments = scanner.nextInt();
+
+        ContractService contractService = new ContractService(new PaypalService());
+        contractService.processContract(contract, installments);
+        System.out.println("Installments: ");
+
+        for (Installment installment : contract.getInstallments()){
+            System.out.println(installment);
+        }
 
         scanner.close();
 
