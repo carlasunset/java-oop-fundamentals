@@ -3,20 +3,21 @@ package Section17_Generics_Set_Map.resolved_exercise.services;
 import java.util.ArrayList;
 import java.util.List;
 
-// This version of PrintService is limited to Integer values.
-// If we want to reuse this logic for other types (String, Double, etc.),
-// we would need to create a new class or change the implementation.
-
+// This version uses Object to allow multiple types,
+// but lacks type safety and requires casting.
+// This limitation motivates the use of Generics.
 public class PrintService {
 
-    private List<Integer> list = new ArrayList<>(); // The list is strongly coupled to Integer type
+    // Using Object allows storing any type, but removes compile-time type safety
+    private List<Object> list = new ArrayList<>();
 
-    // Accepts only Integer values due to the class design
-    public void addValue(Integer value){
+    // Accepts any type, which can lead to heterogeneous lists and potential runtime errors
+    public void addValue(Object value){
         list.add(value);
     }
 
-    public Integer first(){
+    // Returns Object, requiring explicit casting by the caller. This may cause ClassCastException at runtime
+    public Object first(){
         if (list.isEmpty()){
             throw new IllegalStateException("List is empty!");
         }

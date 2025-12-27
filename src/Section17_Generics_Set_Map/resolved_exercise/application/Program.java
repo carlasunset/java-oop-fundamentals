@@ -13,13 +13,22 @@ public class Program {
         System.out.print("How many values? ");
         int n = scanner.nextInt();
 
+        // Mixing different types is allowed when using Object,
+        // but can cause ClassCastException later
+        printService.addValue(140);
+
         for (int i = 0; i < n; i++) {
-            int value = scanner.nextInt();
+            String value = scanner.next();
             printService.addValue(value);
         }
 
         printService.print();
-        System.out.println("First: " + printService.first());
+
+        // Explicit casting is required because PrintService returns Object
+        // This is unsafe and may cause runtime errors
+        String firstValue = (String) printService.first();
+
+        System.out.println("First: " + firstValue);
         scanner.close();
     }
 }
