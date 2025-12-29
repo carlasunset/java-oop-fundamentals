@@ -1,4 +1,4 @@
-package Section17_Generics_Set_Map.set;
+package Section17_Generics_Set_Map.set.demo;
 
 import java.util.Arrays;
 import java.util.Set;
