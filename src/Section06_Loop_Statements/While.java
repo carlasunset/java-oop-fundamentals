@@ -6,16 +6,15 @@ public class While {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        int numero = sc.nextInt();
-        int soma = 0;
+        int number = sc.nextInt();
+        int sum = 0;
 
-        while (numero != 0){
-            soma += numero;
-            numero = sc.nextInt();
+        while (number != 0){
+            sum += number;
+            number = sc.nextInt();
         }
 
-        System.out.println(soma);
-
+        System.out.println(sum);
 
     }
 }
