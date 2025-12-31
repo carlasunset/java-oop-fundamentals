@@ -6,13 +6,13 @@ public class For {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        int repeticao = scanner.nextInt();
-        int soma = 0;
+        int loopRepeat = scanner.nextInt();
+        int sum = 0;
 
-        for (int index=0; index<repeticao; index++){
-            int numeros = scanner.nextInt();
-            soma += numeros;
+        for (int index=0; index < loopRepeat; index++){
+            int numbers = scanner.nextInt();
+            sum += numbers;
         }
-        System.out.println(soma);
+        System.out.println(sum);
     }
 }
