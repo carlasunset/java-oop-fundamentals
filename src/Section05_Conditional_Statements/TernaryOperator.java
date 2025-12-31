@@ -2,10 +2,10 @@ package Section05_Conditional_Statements;
 
 import java.util.Scanner;
 
-public class Ternário {
+public class TernaryOperator {
     public static void main(String[] args) {
 
-        // (condição a ser testada) ? valor_se_verdadeiro : valor_se_falso
+        // (condition to be tested) ? value_if_true : value_if_false
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("What is the total amount of your purchase?:");
