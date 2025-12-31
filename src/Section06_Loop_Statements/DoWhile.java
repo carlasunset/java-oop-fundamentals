@@ -9,16 +9,16 @@ public class DoWhile {
         Locale.setDefault(Locale.US);
         Scanner scanner = new Scanner(System.in);
 
-        char resposta;
+        char answer;
         do {
-            System.out.print("Digite a temperatura em Celsius: ");
+            System.out.print("Type the temperature in Celsius: ");
             double celsius = scanner.nextDouble();
             double F = 9.0 * celsius / 5.0 + 32.0;
-            System.out.println("Temperatura em Fahrenheit: " + F);
+            System.out.println("Temperature in Fahrenheit: " + F);
 
-            System.out.println("Gostaria de repetir o processo?: ");
-            resposta = scanner.next().charAt(0);
-        } while (resposta != 'n');
+            System.out.println("Would you like to repeat this procedure?: ");
+            answer = scanner.next().charAt(0);
+        } while (answer != 'n');
         scanner.close();
     }
 }
