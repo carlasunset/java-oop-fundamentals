@@ -5,6 +5,7 @@ import Section18_Functional_Programming_Lambda_Expressions.predicate.util.Produc
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class Program {
     public static void main(String[] args) {
@@ -15,7 +16,9 @@ public class Program {
         productList.add(new Product("Tablet", 350.50));
         productList.add(new Product("HD Case", 80.90));
 
-        productList.removeIf(Product::nonStaticProductPredicate);
+        Predicate<Product> predicate = p -> p.getPrice() >= 100.00;
+
+        productList.removeIf(predicate);
 
         for (Product p : productList){
             System.out.println(p);
