@@ -7,52 +7,52 @@ public class SwitchCaseExpression {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Digite uma opção de 1 a 7 para imprimir o dia da semana correspondente: ");
+        System.out.println("Enter an option from 1 to 7 to print the corresponding day of the week: ");
 
-        String dia;
+        String weekDay;
         int option = sc.nextInt();
 
 
         switch (option){
             case 1:
-                dia = "domingo";
+                weekDay = "sunday";
                 break;
             case 2:
-                dia = "segunda";
+                weekDay = "monday";
                 break;
             case 3:
-                dia = "terça";
+                weekDay = "tuesday";
                 break;
             case 4:
-                dia = "quarta";
+                weekDay = "wednesday";
                 break;
             case 5:
-                dia = "quinta";
+                weekDay = "thursday";
                 break;
             case 6:
-                dia = "sexta";
+                weekDay = "friday";
                 break;
             case 7:
-                dia = "sábado";
+                weekDay = "saturday";
                 break;
             default:
-                dia = "valor inváido";
+                weekDay = "invalid option";
                 break;
         }
 
-        System.out.println("Dia da semana: " + dia);
+        System.out.println("Day of the week: " + weekDay);
         sc.close();
 
         /* Switch expression: https://docs.oracle.com/en/java/javase/17/language/switch-expressions-and-statements.html
             dia = switch (option) {
-            case 1 -> "domingo";
-            case 2 -> "segunda";
-            case 3 -> "terça";
-            case 4 -> "quarta";
-            case 5 -> "quinta";
-            case 6 -> "sexta";
-            case 7 -> "sábado";
-            default -> "valor inváido";
+            case 1 -> "sunday";
+            case 2 -> "monday";
+            case 3 -> "tuesday";
+            case 4 -> "wednesday";
+            case 5 -> "thursday";
+            case 6 -> "friday";
+            case 7 -> "saturday";
+            default -> "invalid option";
         };
         */
     }
