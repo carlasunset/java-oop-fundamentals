@@ -1,4 +1,4 @@
-package Section09_Constructors_This_Overloading_Encapsulation.construtores.entities;
+package Section09_Constructors_This_Overloading_Encapsulation.constructors.entities;
 
 public class Product {
 
