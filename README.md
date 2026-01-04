@@ -1,18 +1,16 @@
-# Java Foundations and Backend Development
+# Java Backend Foundations
 
-This repository contains my **notes, exercises, and projects** developed during a comprehensive Java course on Udemy.
+This repository contains my notes, exercises, and projects developed throughout a comprehensive **Java backend development** course.
 
-The goal of this repository is to build a **strong foundation in Java** while progressively advancing toward **professional backend development**, following best practices and real-world tools used in the market.
-
----
+The goal of this repository is to build a solid foundation in Java while progressively advancing toward professional backend development, applying best practices and tools commonly used in real-world projects.
 
 ## Topics Covered
 
 ### Java Fundamentals
 - Programming logic and algorithms
 - Java syntax and language fundamentals
-- Classes, attributes and methods
-- Constructors, method overloading and encapsulation
+- Classes, attributes, and methods
+- Constructors, method overloading, and encapsulation
 
 ### Object-Oriented Programming (OOP)
 - Enums and composition
@@ -34,43 +32,36 @@ The goal of this repository is to build a **strong foundation in Java** while pr
 - Reading and writing files
 - Working with directories
 
----
-
 ## 🛠 Tools and Frameworks
 
-This repository also includes studies and practical examples using tools and frameworks commonly required in professional Java development:
+This repository also includes studies and practical examples using tools and frameworks commonly required in professional Java backend development:
 
 - **JDBC** – SQL-based database access
 - **JPA / Hibernate** – Object-relational mapping (ORM)
 - **Spring Boot** – Main Java framework for backend development
 - **Spring Data JPA** – ORM abstraction and data access
-- **Spring Data MongoDB** – NoSQL database integration
-- **JavaFX** – Graphical user interface development
+- **Spring Data MongoDB** – Introduction to NoSQL database integration
 - **Maven** – Dependency and project management
 - **Git / GitHub** – Version control and collaboration
-
----
 
 ## 📂 Repository Structure
 
 The repository is organized by sections and topics following the course progression.  
 Each folder may include:
+
 - Source code examples
 - Exercises
 - Small projects
 - Personal notes and comments
 
----
-
 ## 🎯 Purpose
 
 This repository serves as:
+
 - A personal knowledge base
-- A practical learning journal
-- A portfolio of Java exercises and projects
+- A practical learning and reference repository
+- A portfolio of Java backend exercises and projects
 
 It reflects my continuous learning process and growing experience with Java and backend development.
 
----
-
-📌 *This repository is actively maintained and updated as I progress through the course.*
+📌 This repository is actively maintained and updated as I progress through the course.
