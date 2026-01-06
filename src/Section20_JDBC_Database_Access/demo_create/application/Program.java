@@ -2,10 +2,7 @@ package Section20_JDBC_Database_Access.demo_create.application;
 
 import Section20_JDBC_Database_Access.demo_create.db.DB;
 
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
@@ -22,17 +19,25 @@ public class Program {
 
             preparedStatement = connection.prepareStatement(
                     "INSERT INTO seller (Name, Email, BirthDate, BaseSalary, DepartmentId) " +
-                            "VALUES (?, ?, ?, ?, ?)");
+                            "VALUES (?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
 
-            preparedStatement.setString(1, "Carl Purple");
-            preparedStatement.setString(2, "carl@gmail.com");
-            preparedStatement.setDate(3, new Date(format.parse("22/04/1985").getTime()));
+            preparedStatement.setString(1, "Matthew Lewis");
+            preparedStatement.setString(2, "matthew@gmail.com");
+            preparedStatement.setDate(3, new Date(format.parse("26/11/1988").getTime()));
             preparedStatement.setDouble(4, 3000.00);
             preparedStatement.setInt(5, 4);
 
             int rowsAffected = preparedStatement.executeUpdate();
 
-            System.out.println("Done! Rows Affected: " + rowsAffected);
+            if (rowsAffected > 0){
+                ResultSet rs = preparedStatement.getGeneratedKeys();
+                while (rs.next()){
+                    int id = rs.getInt(1);
+                    System.out.println("Done! Id = " + id);
+                }
+            } else {
+                System.out.println("No rows affecteed!");
+            }
 
         }
         catch (SQLException e){
