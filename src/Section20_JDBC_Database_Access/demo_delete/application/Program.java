@@ -1,7 +1,7 @@
 package Section20_JDBC_Database_Access.demo_delete.application;
 
 import Section20_JDBC_Database_Access.demo_delete.db.DbIntegrityException;
-import Section20_JDBC_Database_Access.demo_update.db.DB;
+import Section20_JDBC_Database_Access.demo_delete.db.DB;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
